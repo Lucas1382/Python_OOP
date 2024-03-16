@@ -16,5 +16,5 @@ item2 = Item("Laptop", 1000, 3)
 item3 = Item("Cable", 10, 5)
 item4 = Item("Mouse", 50, 5)
 item5 = Item("Keyboard", 75, 6)
-# This is for test PULL in Git 
+# This is for test PULL in Git. The Pull is success so i will push it again
 print(Item.all)
