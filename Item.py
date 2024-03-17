@@ -4,7 +4,7 @@ class Item:
     all = []
     pay_rate = 0.8
     def __init__(self,name,price,quantity):
-        self.name = name
+        self.__name = name
         self.price = price
         self.quantity = quantity
         Item.all.append(self)
@@ -29,5 +29,14 @@ class Item:
             return True
         else:
             return False
+    @property
+    def name(self):
+        return self.__name
+    @name.setter
+    def name(self,value):
+        if len(value) > 10:
+            raise Exception("The name is too long")
+        else:
+            self.__name = value
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}('{self.name}','{self.price}','{self.quantity}')"
