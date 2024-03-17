@@ -9,7 +9,7 @@ class Item:
         self.quantity = quantity
         Item.all.append(self)
     def calculatePrice(self,quantities,discount:bool):
-        return quantities*self.price * Item.pay_rate if discount else quantities*self.price
+        return quantities*self.price * self.pay_rate if discount else quantities*self.price
     @classmethod
     def instantiate_from_CSV(cls):
         with open('items.csv', 'r') as file:
